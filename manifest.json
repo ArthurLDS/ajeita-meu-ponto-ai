@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Ajeita Meu Ponto Aí",
+    "description": "Ajeita Meu Ponto Aí",
+    "author": "Arthur Lima de Souza",
+    "browser_action": {
+        "default_title": "Ajeita Meu Ponto Aí",
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*", "http://*/*"
+            ],
+            "js": [
+                "jquery.js", "index.js"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' http://ponto.cwi.com.br/; object-src 'self'"
+}
